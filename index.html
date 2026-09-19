@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Happy Birthday, Rasya 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="backsound.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="noise"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <main id="app">
+    <!-- SLIDE 1 -->
+    <section class="slide active" id="slide1">
+      <div class="stars"></div>
+      <div class="hero-card">
+        <div class="cinematic-moon"><span></span></div>
+        <div class="film-dust"></div>
+        <div class="tiny-label">a little birthday film • for rasya</div>
+        <div class="hero-kicker">chapter one / your day</div>
+        <div class="heart-orbit">
+          <span class="orbit-dot d1">♡</span>
+          <span class="orbit-dot d2">✦</span>
+          <span class="orbit-dot d3">♡</span>
+          <div class="big-heart">♥</div>
+        </div>
+        <p class="eyebrow">20 • 10 • birthday boy</p>
+        <h1>Happy birthday my handsome boy in the world🫶🏻</h1>
+        <p class="subtitle">today is ur special day..</p>
+        <button class="main-btn" id="openBtn"><span>open</span> <b>♡</b></button>
+        <p class="tap-note">tap pelan-pelan, ada sesuatu buat kamu ✦</p>
+        <div class="scroll-line"><span></span></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2 -->
+    <section class="slide" id="slide2">
+      <div class="section-inner">
+        <div class="topline"><span>01</span><span>for my birthday boy</span></div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-glow"></div>
+          <div class="tape"></div>
+          <img src="foto1.jpeg" alt="Foto Rasya">
+          <span class="portrait-sticker">my favorite human ♡</span>
+        </div>
+
+        <button class="envelope" id="letterBtn" aria-label="Buka surat">
+          <div class="env-back"></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="seal">♡</div>
+          <span>Buka suratnya</span>
+        </button>
+
+        <div class="letter-modal" id="letterModal" aria-hidden="true">
+          <div class="modal-backdrop"></div>
+          <div class="letter-paper">
+            <button class="close-modal" id="closeLetter">×</button>
+            <div class="paper-top">surat kecil dari biya ♡</div>
+            <h2>haii sayaangg..</h2>
+            <p>haii sayaangg selamat bertambah umur yaaa happy 20th for uu, semoga apapun harapan dan doa sayang di tahun yg ke 20 sayang lahir ke dunia ini tercapai yaa sayang biya selalu berharap semua yg baik untuk sayangg. biya banggaa banget punya cowo se perfect sayangg semoga bahagia selaluu dan semoga biya bakal selalu jadi salah satu alasan sayang bahagia itu yaa.. i lovee u more than anything, love u more than selff💋</p>
+            <div class="signature">— biya ♡</div>
+          </div>
+        </div>
+
+        <div class="games">
+          <div class="game-heading">
+            <span class="mini-badge">mini games</span>
+            <h2>sebelum lanjut, main dulu yuk 😗</h2>
+            <p>nggak ada hadiah besar sih... paling cuma tambahan sayang.</p>
+          </div>
+
+          <article class="game-card" id="game1">
+            <div class="game-icon">💗</div>
+            <h3>Tangkap Hati Biya</h3>
+            <p>klik 5 hati yang muncul sebelum mereka kabur.</p>
+            <div class="heart-game" id="heartGame"></div>
+            <div class="game-status" id="heartStatus">0 / 5</div>
+            <button class="small-btn" id="startHeart">mulai</button>
+          </article>
+
+          <article class="game-card" id="game2">
+            <div class="game-icon">👀</div>
+            <h3>Seberapa Tau Kamu Tentang Aku?</h3>
+            <p class="question">Biya suka apa?</p>
+            <div class="choices">
+              <button class="choice" data-answer="ice">eskrim👅</button>
+              <button class="choice" data-answer="dimsum">dimsum🤤</button>
+            </div>
+            <div class="answer-box" id="answerBox"></div>
+          </article>
+
+          <article class="game-card" id="game3">
+            <div class="game-icon">🔐</div>
+            <h3>Kunci Rahasia</h3>
+            <p>pilih satu kotak. siapa tahu isinya rahasia kecil.</p>
+            <div class="secret-boxes">
+              <button data-secret="0">?</button>
+              <button data-secret="1">?</button>
+              <button data-secret="2">?</button>
+            </div>
+            <div class="secret-result" id="secretResult"></div>
+          </article>
+        </div>
+
+        <button class="next-btn" data-next="2">lanjut ke kenangan →</button>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: FOTO 2 -->
+    <section class="slide memory-single-slide" id="slide3">
+      <div class="section-inner">
+        <div class="topline"><span>02</span><span>kenangan pertama</span></div>
+        <div class="single-memory">
+          <div class="single-memory-number">01</div>
+          <div class="single-photo-frame">
+            <img src="foto2.jpeg" alt="Kenangan pertama">
+          </div>
+          <p class="single-caption">Hari ini dunia merayakan lahirnya orang paling spesial di hidupku. Selamat ulang tahun, Rasya-nya biya. ✨</p>
+        </div>
+        <button class="next-btn" data-next="3">lanjut →</button>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FOTO 3 -->
+    <section class="slide memory-single-slide" id="slide4">
+      <div class="section-inner">
+        <div class="topline"><span>03</span><span>kenangan kedua</span></div>
+        <div class="single-memory">
+          <div class="single-memory-number">02</div>
+          <div class="single-photo-frame">
+            <img src="foto3.jpeg" alt="Kenangan kedua">
+          </div>
+          <p class="single-caption">Selamat tumbuh dewasa, Sayang. Semoga apapun yang kamu semogakan segera disemogakan oleh-Nya.</p>
+        </div>
+        <button class="next-btn" data-next="4">lanjut →</button>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: FOTO 4 -->
+    <section class="slide memory-single-slide" id="slide5">
+      <div class="section-inner">
+        <div class="topline"><span>04</span><span>kenangan ketiga</span></div>
+        <div class="single-memory">
+          <div class="single-memory-number">03</div>
+          <div class="single-photo-frame">
+            <img src="foto4.jpeg" alt="Kenangan ketiga">
+          </div>
+          <p class="single-caption">Makasi uda lahir ke dunia dan jadi pasangan biyaa yaa sayang, biyaa sayaaangg banget</p>
+        </div>
+        <button class="next-btn" data-next="5">lanjut →</button>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: FOTO 5 -->
+    <section class="slide memory-single-slide" id="slide6">
+      <div class="section-inner">
+        <div class="topline"><span>05</span><span>kenangan keempat</span></div>
+        <div class="single-memory">
+          <div class="single-memory-number">04</div>
+          <div class="single-photo-frame">
+            <img src="foto5.jpeg" alt="Kenangan keempat">
+          </div>
+          <p class="single-caption">I love you more than you’ll ever know. sayang berharga banget buat biya🫶🏻</p>
+        </div>
+        <button class="next-btn" data-next="6">pesan terakhir →</button>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: PESAN TERAKHIR -->
+    <section class="slide final-slide" id="slide7">
+      <div class="final-stars"></div>
+      <div class="final-content">
+        <div class="final-divider">♡ &nbsp; ✦ &nbsp; ♡</div>
+        <div class="final-label">one last thing for you</div>
+        <h2>makasi uda selalu jadi diri sendiri dan bangga sama diri sayang sendiri yaa biya happyy kalau liat sayang happyy, sama biya terus yaa sayangg..</h2>
+        <div class="final-divider">♡ &nbsp; ✦ &nbsp; ♡</div>
+        <h1>Sekali lagi, happy birthdayy<br><span>my love, my everything!!</span></h1>
+        <div class="final-song">♫ lagu ini akan menemani sampai akhir</div>
+        <button class="replay-btn" id="replay">↻ ulang dari awal</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="music-pill" id="musicPill">
+    <button id="musicToggle">♫</button>
+    <span id="musicText">musik sedang diputar</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
